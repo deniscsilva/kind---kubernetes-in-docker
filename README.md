@@ -53,7 +53,8 @@ kubectl get pods -n ingress-nginx
 ### 🔷 3. Permitir pods no nó control-plane
 
 ```bash
-kubectl taint nodes --all node-role.kubernetes.io/control-plane-
+kubectl taint nodes --all node-role.kubernetes.io/control-plane
+kubectl label node kind-control-plane ingress-ready=true
 ```
 
 ---
